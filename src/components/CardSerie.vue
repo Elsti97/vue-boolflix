@@ -1,13 +1,13 @@
 <template>
   <div>
-
+    
   </div>
 </template>
 
 <script>
-export default {
-    name: 'HeaderComp',
-}
+  export default {
+    name: 'CardSerie',
+  }
 </script>
 
 <style lang="scss" scoped>
