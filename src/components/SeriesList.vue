@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Lista di Serie:</h2>
+    <h1>Lista di Serie:</h1>
     <div class="d-flex flex-wrap justify-content-center">
       <CardSerie
         v-for="(elem, index) in arraySerie2"
@@ -26,7 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  margin: 1.5rem 1rem;
+h1 {
+  padding: 1.5rem 1rem;
+  color: #E7EEF1;
 }
 </style>

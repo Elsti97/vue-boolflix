@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Lista di Film:</h2>
+    <h1>Lista di Film:</h1>
     <div class="d-flex flex-wrap justify-content-center">
       <CardFilm
         v-for="(elem, index) in arrayFilm2"
@@ -26,11 +26,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  margin: 1.5rem 1rem;
+h1 {
+  padding: 1.5rem 1rem;
+  color: #E7EEF1;
 }
 
 .overf-x{
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 </style>
