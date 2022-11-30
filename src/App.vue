@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HeaderComp @search="searchFilm" />
-    <MainComp :arrayFilm="FilterFilms" />
+    <HeaderComp @search="searchAll" />
+    <MainComp :arrayFilm="FilterFilms" :arraySerie="FilterSerie" />
   </div>
 </template>
 
@@ -19,17 +19,23 @@ export default {
   data(){
     return{
       FilterFilms: [],
+      FilterSerie: [],
     }
   },
   mounted(){
   },
   methods: {
-    searchFilm(valoreInput){
-      axios.get('https://api.themoviedb.org/3/search/movie?api_key=22fe714c30b0e22065d5943a4abfc6fa&query=' + valoreInput)
-      .then((response)=>{
-        this.FilterFilms = response.data.results;
-      });
+    searchAll(valoreInput){
+        axios.get('https://api.themoviedb.org/3/search/movie?api_key=22fe714c30b0e22065d5943a4abfc6fa&query=' + valoreInput)
+        .then((response)=>{
+          this.FilterFilms = response.data.results;
+        });
+        axios.get('https://api.themoviedb.org/3/search/tv?api_key=22fe714c30b0e22065d5943a4abfc6fa&language=it_IT&query=' + valoreInput)
+        .then((response) =>{
+          this.FilterSerie = response.data.results;
+        })
     }
+
   }
 }
 </script>
