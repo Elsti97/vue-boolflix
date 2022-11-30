@@ -5,7 +5,7 @@
     </div>
 
     <div>
-      <input type="text" v-model="textInput" @keyup="$emit('search', textInput)" placeholder="Inserisci un titolo">
+      <input type="text" v-model="textInput" @keyup.enter="$emit('search', textInput)" placeholder="Inserisci un titolo">
     </div>
   </header>
 </template>
