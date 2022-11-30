@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Lista di Film:</h1>
-    <div class="d-flex flex-wrap justify-content-center">
+    <div class="d-flex overflow-auto">
       <CardFilm
         v-for="(elem, index) in arrayFilm2"
         :key="index"

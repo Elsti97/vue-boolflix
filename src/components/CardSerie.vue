@@ -23,7 +23,6 @@
               <font-awesome-icon icon="fa-regular fa-star" class="gold" />
             </div>
           </div>
-        <!-- <p>Voto: {{singleSerie.vote_average}}</p> -->
         <p>Overview: {{singleSerie.overview}}</p>
       </div>
 

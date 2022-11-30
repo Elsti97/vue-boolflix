@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Lista di Serie:</h1>
-    <div class="d-flex flex-wrap justify-content-center">
+    <div class="d-flex overflow-auto">
       <CardSerie
         v-for="(elem, index) in arraySerie2"
         :key="index"
