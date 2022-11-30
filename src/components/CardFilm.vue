@@ -4,9 +4,9 @@
       <img :src="`http://image.tmdb.org/t/p/w342/${singleFilm.poster_path}`" alt="">
       <div class="titles">
         <p>Titolo: {{singleFilm.title}}</p>
-        <p>Titolo originale: {{singleFilm.original_title}}</p>
+        <p>Titolo Originale: {{singleFilm.original_title}}</p>
         <img v-if="flags.includes(singleFilm.original_language)" :src="require(`../assets/${singleFilm.original_language}.svg`)" class="flag">
-        <p v-else>Lingua originale: {{singleFilm.original_language}}</p>
+        <p v-else>Lingua Originale: {{singleFilm.original_language.toUpperCase()}}</p>
         <p>Voto: {{singleFilm.vote_average}}</p>
         <p>Overview: {{singleFilm.overview}}</p>
         </div>
@@ -23,7 +23,7 @@
     },
     data(){
       return {
-        flags: ["it", "en", "fr", "de", "es", "ja", "pt"]
+        flags: ["it", "en", "fr", "de", "es", "ja", "pt"],
       }
     },
     methods: {
