@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="card">
+      {{starsRating()}}
       <img v-if="singleFilm.poster_path" :src="`http://image.tmdb.org/t/p/w342/${singleFilm.poster_path}`" alt="copertina film">
       <img v-else src="../assets/img-not-found.png" class="not-img">
       <div class="titles">
@@ -61,13 +62,11 @@ export default {
         this.stellaPiena = Math.floor(this.mezzoVoto);
         this.stellaVuota = "5" - this.stellaPiena - "1";
       } else {
+        this.mezzaStella = false;
         this.stellaPiena = this.mezzoVoto;
         this.stellaVuota = "5" - this.stellaPiena;
       }
     },
-  },
-  mounted() {
-    this.starsRating();
   },
 };
 </script>
