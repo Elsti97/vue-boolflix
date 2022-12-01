@@ -1,32 +1,47 @@
 <template>
-  <header class=" py-3 d-flex justify-content-around align-items-center">
+  <header
+    class="p-3 d-flex justify-content-between align-items-center flex-wrap"
+  >
     <div>
-      <h2>BOOLFLIX</h2>
+      <img src="../assets/netflix-logo.png" alt="logo netflix" class="logo" />
     </div>
 
-    <div>
-      <input type="text" v-model="textInput" @keyup.enter="$emit('search', textInput)" placeholder="Inserisci un titolo">
+    <div class="w-25">
+      <input
+        type="text"
+        v-model="textInput"
+        placeholder="Inserisci un titolo"
+        class="py-1"
+      />
+      <button class="btn btn-primary ms-3" @click="$emit('search', textInput)">
+        Cerca
+      </button>
     </div>
   </header>
 </template>
 
 <script>
 export default {
-    name: 'HeaderComp',
-    data(){
-      return{
-        textInput: '',
-      }
-    }
-}
+  name: "HeaderComp",
+  data() {
+    return {
+      textInput: "",
+    };
+  },
+  methods: {
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-  header{
-    background-color: black;
-    color: red;
-    h2{
-      margin: 1rem 0;
-    }
+header {
+  background-color: black;
+  color: red;
+  .logo {
+    width: 15rem;
   }
+  h2 {
+    margin: 1rem 0;
+  }
+}
 </style>

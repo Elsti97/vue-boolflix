@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="card">
-      <img
-        :src="`http://image.tmdb.org/t/p/w342/${singleFilm.poster_path}`"
-        alt=""
-      />
+      <img v-if="singleFilm.poster_path" :src="`http://image.tmdb.org/t/p/w342/${singleFilm.poster_path}`" alt="copertina film">
+      <img v-else src="../assets/img-not-found.png" class="not-img">
       <div class="titles">
         <p>Titolo: {{ singleFilm.title }}</p>
         <p>Titolo Originale: {{ singleFilm.original_title }}</p>
@@ -77,6 +75,10 @@ export default {
 <style lang="scss" scoped>
 .card {
   position: relative;
+  .not-img{
+    width: 342px;
+    height: 500px;
+  }
 }
 .titles {
   display: none;

@@ -35,7 +35,6 @@ export default {
           this.FilterSerie = response.data.results;
         })
     }
-
   }
 }
 </script>
